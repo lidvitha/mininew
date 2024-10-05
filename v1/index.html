@@ -1,0 +1,273 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Bobby Earth</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        overflow: hidden;
+      }
+      #infoBox {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        text-align: left;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+      }
+      .infoBox {
+        position: absolute;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        text-align: left;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+      }
+      #infoBox1 {
+        top: 150px;
+        left: 20px;
+      }
+      #infoBox2 {
+        top: 280px;
+        left: 20px;
+      }
+      #infoBox3 {
+        top: 150px;
+        right: 20px;
+      }
+      #infoBox4 {
+        top: 280px;
+        right: 20px;
+      }
+      #voiceButton {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        pointer-events: auto;
+        font-size: 18px;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.131/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.131/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="infoBox">
+      <h3>Earth</h3>
+      <p>
+        Earth is the third planet from the Sun and the only known astronomical
+        object to harbor life.
+      </p>
+    </div>
+    
+    <div id="infoBox1" class="infoBox">
+      <h3>Earth's Species</h3>
+      <p>
+        Earth is home to millions of species, including humans, and has a diverse
+        range of ecosystems.
+      </p>
+    </div>
+
+    <div id="infoBox2" class="infoBox">
+      <h3>Earth's Atmosphere</h3>
+      <p>
+        Earth's atmosphere protects life on the planet by absorbing ultraviolet
+        solar radiation.
+      </p>
+    </div>
+
+    <div id="infoBox3" class="infoBox">
+      <h3>Earth's Water Content</h3>
+      <p>
+        Approximately 71% of Earth's surface is covered with water, most of which is found in the oceans. Freshwater is vital for life on land.
+      </p>
+    </div>
+
+    <div id="infoBox4" class="infoBox">
+      <h3>Human Life on Earth</h3>
+      <p>
+        Human life on Earth depends on the planet's natural resources, including water, air, and a stable climate. Humans have adapted to a wide range of environments on Earth.
+      </p>
+    </div>
+
+    <button id="voiceButton">Listen</button>
+
+    <script type="module" src="index.js"></script>
+    <script>
+      document.getElementById('voiceButton').addEventListener('click', function() {
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = "Earth is the third planet from the Sun and the only known astronomical object to harbor life. It is home to millions of species, including humans, and has a diverse range of ecosystems. The Earth's atmosphere protects life on the planet by absorbing ultraviolet solar radiation. Approximately 71% of the Earth's surface is covered with water, most of which is found in the oceans. Freshwater is vital for life on land. Human life on Earth depends on the planet's natural resources, including water, air, and a stable climate. Humans have adapted to a wide range of environments on Earth.";
+        speech.lang = "en-US";
+        speech.rate = 1;
+        window.speechSynthesis.speak(speech);
+      });
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Bobby Earth</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        overflow: hidden;
+      }
+      #infoBox {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        text-align: left;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+      }
+      .infoBox {
+        position: absolute;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        text-align: left;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+      }
+      #infoBox1 {
+        top: 150px;
+        left: 20px;
+      }
+      #infoBox2 {
+        top: 280px;
+        left: 20px;
+      }
+      #infoBox3 {
+        top: 150px;
+        right: 20px;
+      }
+      #infoBox4 {
+        top: 280px;
+        right: 20px;
+      }
+      #buttonContainer {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+      }
+      #voiceButton, #learnMoreButton {
+        padding: 12px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        pointer-events: auto;
+        font-size: 18px;
+      }
+      #learnMoreButton {
+        background-color: #00A0E3;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.131/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.131/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="infoBox">
+      <h3>Earth</h3>
+      <p>
+        Earth is the third planet from the Sun and the only known astronomical
+        object to harbor life.
+      </p>
+    </div>
+    
+    <div id="infoBox1" class="infoBox">
+      <h3>Earth's Species</h3>
+      <p>
+        Earth is home to millions of species, including humans, and has a diverse
+        range of ecosystems.
+      </p>
+    </div>
+
+    <div id="infoBox2" class="infoBox">
+      <h3>Earth's Atmosphere</h3>
+      <p>
+        Earth's atmosphere protects life on the planet by absorbing ultraviolet
+        solar radiation.
+      </p>
+    </div>
+
+    <div id="infoBox3" class="infoBox">
+      <h3>Earth's Water Content</h3>
+      <p>
+        Approximately 71% of Earth's surface is covered with water, most of which is found in the oceans. Freshwater is vital for life on land.
+      </p>
+    </div>
+
+    <div id="infoBox4" class="infoBox">
+      <h3>Human Life on Earth</h3>
+      <p>
+        Human life on Earth depends on the planet's natural resources, including water, air, and a stable climate. Humans have adapted to a wide range of environments on Earth.
+      </p>
+    </div>
+
+    <div id="buttonContainer">
+      <button id="voiceButton">Listen</button>
+      <button id="learnMoreButton" onclick="window.open('https://en.wikipedia.org/wiki/Earth', '_blank')">Learn More</button>
+    </div>
+
+    <script type="module" src="index.js"></script>
+    <script>
+      document.getElementById('voiceButton').addEventListener('click', function() {
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = "Earth is the third planet from the Sun and the only known astronomical object to harbor life. It is home to millions of species, including humans, and has a diverse range of ecosystems. The Earth's atmosphere protects life on the planet by absorbing ultraviolet solar radiation. Approximately 71% of the Earth's surface is covered with water, most of which is found in the oceans. Freshwater is vital for life on land. Human life on Earth depends on the planet's natural resources, including water, air, and a stable climate. Humans have adapted to a wide range of environments on Earth.";
+        speech.lang = "en-US";
+        speech.rate = 1;
+        window.speechSynthesis.speak(speech);
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+h6 {
+    color: white;
+    font-size: 55px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    top: 5px;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+#brain {
+    position: absolute;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}
+
+#brain-info {
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid white;
+    /* Add border */
+    border-radius: 10px;
+    /* Add border radius for rounded corners */
+}
